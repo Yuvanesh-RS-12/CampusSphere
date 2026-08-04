@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CampusSphere</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+<main class="container cs-dashboard">
+    <h2 class="cs-dashboard-title">Welcome to CampusSphere</h2>
+    <p class="cs-dashboard-subtitle" sec:authentication="name"></p>
+
+    <!-- 
+      All four content modules are now live: Marketplace (Phase 2),
+      Freelance Hub (Phase 3), Senior Guidance (Phase 4), and Lost &
+      Found (Phase 5). Notifications and Admin remain for later phases.
+    -->
+    <div class="row g-4 mt-2">
+        <div class="col-md-3 col-sm-6">
+            <a class="cs-module-card cs-module-card-active" href="/marketplace">
+                <h4>Marketplace</h4>
+                <span class="badge cs-badge-live">Browse &amp; Sell</span>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <a class="cs-module-card cs-module-card-active" href="/freelance">
+                <h4>Freelance Hub</h4>
+                <span class="badge cs-badge-live">Browse &amp; Post</span>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <a class="cs-module-card cs-module-card-active" href="/guidance">
+                <h4>Senior Guidance</h4>
+                <span class="badge cs-badge-live">Browse &amp; Share</span>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <a class="cs-module-card cs-module-card-active" href="/lostfound">
+                <h4>Lost &amp; Found</h4>
+                <span class="badge cs-badge-live">Report &amp; Browse</span>
+            </a>
+        </div>
+    </div>
+</main>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
