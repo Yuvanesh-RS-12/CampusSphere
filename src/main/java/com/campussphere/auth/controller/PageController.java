@@ -1,5 +1,6 @@
 package com.campussphere.auth.controller;
 
+<<<<<<< HEAD
 import com.campussphere.freelance.service.FreelanceServiceManager;
 import com.campussphere.guidance.service.GuidanceServiceManager;
 import com.campussphere.lostfound.service.LostFoundServiceManager;
@@ -16,6 +17,15 @@ import java.util.List;
  * Serves the server-rendered HTML views: the public landing page, the
  * registration page, Spring Security's login page, and the post-login
  * dashboard.
+=======
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+/**
+ * Serves the server-rendered HTML views for Phase 1: the public landing
+ * page, the registration page, Spring Security's login page, and the
+ * post-login dashboard placeholder.
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
  *
  * Kept separate from AuthController (which handles JSON API calls) so
  * that view-serving and API logic are not mixed in the same class.
@@ -23,6 +33,7 @@ import java.util.List;
 @Controller
 public class PageController {
 
+<<<<<<< HEAD
     private static final int RECENT_ITEM_LIMIT = 3;
 
     private final MarketplaceListingService marketplaceListingService;
@@ -43,6 +54,8 @@ public class PageController {
         this.opportunityService = opportunityService;
     }
 
+=======
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
     /**
      * Public landing page. Accessible without authentication.
      */
@@ -71,6 +84,7 @@ public class PageController {
     }
 
     /**
+<<<<<<< HEAD
      * Post-login dashboard. Shows live stats and recent activity
      * across all five content areas (the four original modules plus
      * Global Opportunities, added in this improvement pass). Reuses
@@ -111,4 +125,14 @@ public class PageController {
     private <T> List<T> firstN(List<T> list, int n) {
         return list.size() <= n ? list : list.subList(0, n);
     }
+=======
+     * Landing page after a successful login. Later phases will replace
+     * this placeholder with real module content (listings, notifications,
+     * etc.) once Marketplace, Freelance, Guidance, and Lost & Found exist.
+     */
+    @GetMapping("/dashboard")
+    public String dashboard() {
+        return "dashboard";
+    }
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
 }

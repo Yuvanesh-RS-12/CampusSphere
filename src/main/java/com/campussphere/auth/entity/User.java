@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 /**
+<<<<<<< HEAD
  * Core identity entity for CampusSphere. Every content module
  * (MarketplaceListing, FreelanceService, GuidancePost, LostFoundPost)
  * relates back to this entity as the owner/author of a post, and the
@@ -14,6 +15,16 @@ import java.time.LocalDateTime;
  * (profilePicturePath, skills, aboutMe, contactDetails) on top of the
  * Phase 1 authentication fields - all additive and nullable, so no
  * existing registration/login/module code needed to change.
+=======
+ * Core identity entity for CampusSphere. Every other module (Listing,
+ * Interaction, Review, Notification, Report - added in later phases)
+ * relates back to this entity as the "owner" or "actor" of an action.
+ *
+ * Kept intentionally minimal in Phase 1: only what is required for
+ * authentication and basic profile display. Additional profile fields
+ * (bio, avatar, contact preferences) can be added in Phase 2 without
+ * breaking this structure.
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
  */
 @Entity
 @Table(name = "users")
@@ -51,6 +62,7 @@ public class User {
     @Column(nullable = false)
     private boolean verified = false;
 
+<<<<<<< HEAD
     /**
      * Profile fields added in the Final Phase. All nullable and
      * additive - existing registration/login flow is completely
@@ -69,6 +81,8 @@ public class User {
     @Column(length = 150)
     private String contactDetails;
 
+=======
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
@@ -154,6 +168,7 @@ public class User {
         this.verified = verified;
     }
 
+<<<<<<< HEAD
     public String getProfilePicturePath() {
         return profilePicturePath;
     }
@@ -186,6 +201,8 @@ public class User {
         this.contactDetails = contactDetails;
     }
 
+=======
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }

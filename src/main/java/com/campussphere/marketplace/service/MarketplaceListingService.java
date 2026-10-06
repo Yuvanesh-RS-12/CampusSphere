@@ -11,7 +11,10 @@ import com.campussphere.marketplace.dto.MarketplaceListingUpdateDTO;
 import com.campussphere.marketplace.entity.ListingCategory;
 import com.campussphere.marketplace.entity.MarketplaceListing;
 import com.campussphere.marketplace.repository.MarketplaceListingRepository;
+<<<<<<< HEAD
 import org.springframework.data.domain.Sort;
+=======
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -131,6 +134,7 @@ public class MarketplaceListingService {
                 .collect(Collectors.toList());
     }
 
+<<<<<<< HEAD
     /**
      * Full moderation list for the Admin module - every listing
      * regardless of status, unlike the public browseListings() method
@@ -157,6 +161,8 @@ public class MarketplaceListingService {
         listingRepository.delete(listing);
     }
 
+=======
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
     // ---------- Internal helpers ----------
 
     private MarketplaceListing getListingOrThrow(Long listingId) {

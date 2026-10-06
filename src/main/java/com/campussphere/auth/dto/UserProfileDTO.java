@@ -21,10 +21,13 @@ public class UserProfileDTO {
     private Role role;
     private boolean verified;
     private LocalDateTime createdAt;
+<<<<<<< HEAD
     private String profilePictureUrl;
     private String skills;
     private String aboutMe;
     private String contactDetails;
+=======
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
 
     public UserProfileDTO() {
     }
@@ -44,10 +47,13 @@ public class UserProfileDTO {
         dto.setRole(user.getRole());
         dto.setVerified(user.isVerified());
         dto.setCreatedAt(user.getCreatedAt());
+<<<<<<< HEAD
         dto.setProfilePictureUrl(user.getProfilePicturePath() != null ? "/uploads/" + user.getProfilePicturePath() : null);
         dto.setSkills(user.getSkills());
         dto.setAboutMe(user.getAboutMe());
         dto.setContactDetails(user.getContactDetails());
+=======
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
         return dto;
     }
 
@@ -114,6 +120,7 @@ public class UserProfileDTO {
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
+<<<<<<< HEAD
 
     public String getProfilePictureUrl() {
         return profilePictureUrl;
@@ -146,4 +153,6 @@ public class UserProfileDTO {
     public void setContactDetails(String contactDetails) {
         this.contactDetails = contactDetails;
     }
+=======
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
 }

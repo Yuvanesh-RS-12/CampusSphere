@@ -11,7 +11,10 @@ import com.campussphere.guidance.dto.GuidancePostUpdateDTO;
 import com.campussphere.guidance.entity.GuidanceCategory;
 import com.campussphere.guidance.entity.GuidancePost;
 import com.campussphere.guidance.repository.GuidancePostRepository;
+<<<<<<< HEAD
 import org.springframework.data.domain.Sort;
+=======
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -131,6 +134,7 @@ public class GuidanceServiceManager {
                 .collect(Collectors.toList());
     }
 
+<<<<<<< HEAD
     /**
      * Full moderation list for the Admin module - every post
      * regardless of status. Mirrors MarketplaceListingService.getAllForAdmin().
@@ -153,6 +157,8 @@ public class GuidanceServiceManager {
         postRepository.delete(post);
     }
 
+=======
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
     // ---------- Internal helpers ----------
 
     private GuidancePost getPostOrThrow(Long postId) {

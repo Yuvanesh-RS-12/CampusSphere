@@ -8,6 +8,11 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+<<<<<<< HEAD
+=======
+import java.util.List;
+
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
 /**
  * Bridges CampusSphere's User entity to Spring Security's authentication
  * mechanism. Spring Security calls loadUserByUsername() during login and

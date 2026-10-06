@@ -1,13 +1,19 @@
 package com.campussphere.auth.service;
 
+<<<<<<< HEAD
 import com.campussphere.auth.dto.ProfileUpdateDTO;
+=======
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
 import com.campussphere.auth.dto.UserProfileDTO;
 import com.campussphere.auth.dto.UserRegisterDTO;
 import com.campussphere.auth.entity.User;
 import com.campussphere.auth.repository.UserRepository;
 import com.campussphere.common.exception.DuplicateResourceException;
 import com.campussphere.common.exception.ResourceNotFoundException;
+<<<<<<< HEAD
 import com.campussphere.common.service.FileStorageService;
+=======
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,6 +28,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class UserService {
 
+<<<<<<< HEAD
     private static final String UPLOAD_SUBDIRECTORY = "profile";
 
     private final UserRepository userRepository;
@@ -33,6 +40,14 @@ public class UserService {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.fileStorageService = fileStorageService;
+=======
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
+
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
     }
 
     /**
@@ -74,6 +89,7 @@ public class UserService {
                 .orElseThrow(() -> new ResourceNotFoundException("No account found for email: " + email));
         return UserProfileDTO.fromEntity(user);
     }
+<<<<<<< HEAD
 
     /**
      * Updates the editable profile fields for the currently authenticated
@@ -103,4 +119,6 @@ public class UserService {
         User saved = userRepository.save(user);
         return UserProfileDTO.fromEntity(saved);
     }
+=======
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
 }

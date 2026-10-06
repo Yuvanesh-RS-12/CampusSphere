@@ -202,6 +202,7 @@ a {
     color: var(--cs-text-muted);
 }
 
+<<<<<<< HEAD
 /* ---------- Shared small utility text (module-agnostic) ---------- */
 .cs-card-meta {
     font-size: 0.85rem;
@@ -568,6 +569,8 @@ a {
    End App Shell
    ===================================================== */
 
+=======
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
 /* ---------- Footer ---------- */
 .cs-footer {
     background-color: var(--cs-surface);
@@ -582,6 +585,7 @@ a {
     font-size: 0.8rem;
     opacity: 0.8;
 }
+<<<<<<< HEAD
 
 /* =====================================================
    Improvement Pass - 5-column grid helper + UI polish
@@ -677,3 +681,5 @@ a {
         padding-bottom: 0.55rem;
     }
 }
+=======
+>>>>>>> d9a252789c419337c579361f6e0d70e526156b88
